@@ -15,6 +15,9 @@ before_install:
 install:
 - npm install -g hexo-cli
 - npm install
+addons:
+  ssh_known_hosts: git.coding.net
+  ssh_known_hosts: github.com
 script:
 - hexo clean
 - hexo g
