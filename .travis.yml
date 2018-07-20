@@ -7,8 +7,8 @@ branches:
   only:
   - master
 before_install:
-- openssl aes-256-cbc -K $encrypted_52897805cb86_key -iv $encrypted_52897805cb86_iv
-  -in id_rsa.enc -out id_rsa -d
+- openssl aes-256-cbc -K $encrypted_a7e52f101156_key -iv $encrypted_a7e52f101156_iv
+  -in .travis/id_rsa.enc -out ~/.ssh/id_rsa -d
 - git config user.name "Fanite"
 - git config user.email "bellong@vip.qq.com"
 - git submodule update --init --recursive
