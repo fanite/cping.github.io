@@ -1,0 +1,29 @@
+# node js
+language: node_js
+node_js: stable
+
+# cache
+cache:
+  directories:
+    - node_modules
+
+branches:
+  only:
+    - master
+
+# git config
+before_install:
+  - git config user.name "Fanite"
+  - git config user.email "bellong@vip.qq.com"
+  - git submodule update --init --recursive
+
+# Start: Build Lifecycle
+install:
+  - npm install -g hexo-cli
+  - npm install
+
+# generate & deploy
+script:
+  - hexo clean
+  - hexo g
+  - hexo d
