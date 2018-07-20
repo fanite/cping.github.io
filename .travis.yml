@@ -1,29 +1,25 @@
-# node js
 language: node_js
 node_js: stable
-
-# cache
 cache:
   directories:
-    - node_modules
-
+  - node_modules
 branches:
   only:
-    - master
-
-# git config
+  - master
 before_install:
-  - git config user.name "Fanite"
-  - git config user.email "bellong@vip.qq.com"
-  - git submodule update --init --recursive
-
-# Start: Build Lifecycle
+- openssl aes-256-cbc -K $encrypted_52897805cb86_key -iv $encrypted_52897805cb86_iv
+  -in id_rsa.enc -out ~/.ssh/id_rsa -d
+- chmod 600 ~/.ssh/id_rsa
+- eval $(ssh-agent)
+- ssh-add ~/.ssh/id_rsa
+- cp .travis/ssh_config ~/.ssh/config
+- git config user.name "Fanite"
+- git config user.email "bellong@vip.qq.com"
+- git submodule update --init --recursive
 install:
-  - npm install -g hexo-cli
-  - npm install
-
-# generate & deploy
+- npm install -g hexo-cli
+- npm install
 script:
-  - hexo clean
-  - hexo g
-  - hexo d
+- hexo clean
+- hexo g
+- hexo d
