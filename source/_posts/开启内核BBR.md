@@ -3,7 +3,6 @@ title: 开启内核BBR
 date: 2018-08-16 15:43:26
 tags: ["Linux","VPS","BBR"]
 ---
-## 开启Linux内核BBR
 
 大名鼎鼎的TCP BBR拥塞控制算法开启方式：
 
