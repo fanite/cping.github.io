@@ -1,6 +1,7 @@
 ---
 title: 开启内核BBR
 date: 2018-08-16 15:43:26
+categories: "Linux"
 tags: ["Linux","VPS","BBR"]
 ---
 
