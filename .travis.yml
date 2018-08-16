@@ -12,7 +12,7 @@ before_install:
 - chmod 600 ~/.ssh/id_rsa
 - git config user.name "Fanite"
 - git config user.email "bellong@vip.qq.com"
-- git submodule update --init --sync --recursive
+- git submodule update --init --recursive
 
 install:
 - npm install -g hexo-cli
