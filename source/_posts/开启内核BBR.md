@@ -4,13 +4,16 @@ date: 2018-08-16 15:43:26
 tags: ["Linux","VPS","BBR"]
 ---
 ## 开启Linux内核BBR
----
+
 大名鼎鼎的TCP BBR拥塞控制算法开启方式：
+
 ``` bash
 # 查看内核。需要内核4.11+，低版本的内核请先升级内核
 uname -r
 ```
+
 > 开始方法
+
 ```bash
 modprobe tcp_bbr
 
