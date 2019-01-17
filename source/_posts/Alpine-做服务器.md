@@ -8,7 +8,8 @@ tags:
 ```bash
 vi /etc/ssh/sshd_config
 ```
-设置``` PermitRootLogin ```为``` yes ```
+
+设置`PermitRootLogin`为`yes`
 
 ---
 
