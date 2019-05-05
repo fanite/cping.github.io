@@ -13,3 +13,4 @@ document.addEventListener('readystatechange', function () {
     document.querySelector('.loading').style.display = 'none'
   }
 })
+```
