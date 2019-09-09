@@ -16,6 +16,7 @@ yum -y install epel-release
 yum -y install fail2ban
 ```
 > 2、添加在/etc/fail2ban/jail.d/my-jail.local来覆盖默认规则
+
 ```ini
 [DEFAULT]
 ignoreip = 127.0.0.1/8 ::1
