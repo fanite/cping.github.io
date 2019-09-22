@@ -315,7 +315,7 @@ set global validate_password_policy=LOW;
 # 创建用户
 create user 'user'@'host' identified by 'password';
 # 用户授权
-grant all privileges on 'database'.* to 'user'@'host' identified by 'password' with grant option;
+grant all privileges on `database`.* to 'user'@'host' identified by 'password' with grant option;
 # 刷新权限
 flush privileges;
 # 修改用户密码
