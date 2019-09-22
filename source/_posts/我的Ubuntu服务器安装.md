@@ -106,7 +106,7 @@ ufw allow "Nginx Full"
 service nginx start
 # 配置Nginx，删除用户www-data, 添加www用户(需要先停止相关服务)
 userdel -rf www-data
-groudadd -g 33 www
+groupadd -g 33 www
 useradd -m -s /usr/sbin/nologin -u 33 -g www www -c www
 vi /etc/nginx/nginx.conf
 ```
@@ -296,3 +296,42 @@ server {
 #	}
 #}
 ```
+
+## 笔记
+
+> PHP禁用函数(vi /etc/php/7.2/fpm/php.ini)
+
+```
+disable_functions = eval,passthru,exec,system,chroot,scandir,chgrp,chown,shell_exec,proc_open,proc_get_status,ini_alter,ini_alter,ini_restore,dl,pfsockopen,openlog,syslog,readlink,symlink,popepassthru,stream_socket_server,fsocket,fsockopen
+```
+
+> mysql
+
+```sql
+# 查看用户密码策略(查看全局变量))
+show variables like "validate_password%";
+# 修改全局变量
+set global validate_password_policy=LOW;
+# 创建用户
+create user 'user'@'host' identified by 'password';
+# 用户授权
+grant all privileges on 'database'.* to 'user'@'host' identified by 'password' with grant option;
+# 刷新权限
+flush privileges;
+# 修改用户密码
+set password for 'user'@'host' = password('new password');
+# 修改用户名
+rename user 'olduser'@'host' to 'newuser'@'host';
+# 创建数据库
+create database if not exists database_name character set uftmb4 collate utf8mb4_general_ci;
+# 删除数据库
+drop database if exists database_name;
+# 创建数据库表
+create table `table_name` (
+  `id` int(11) not null auto_increment comment 'comment',
+  `name` varchar(25) DEFAULT NULL,
+  `deptId` int(11) DEFAULT NULL,
+  `salary` float DEFAULT NULL,
+	primary key (`id`),
+	unique index `indexname`(`id`) using btree comment 'index comment'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
