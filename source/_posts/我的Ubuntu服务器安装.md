@@ -335,3 +335,4 @@ create table `table_name` (
 	primary key (`id`),
 	unique index `indexname`(`id`) using btree comment 'index comment'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+```
