@@ -3,13 +3,13 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
-description: ''
-keywords:
+title: Fanite
+subtitle: 高山仰止，景行行止，虽不能至，然心向往之
+description: 我的个人部落格
+keywords: blog, fanite
 author: Fanite
 language: zh-CN
-timezone:
+timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -43,16 +43,16 @@ highlight:
   line_number: true
   auto_detect: false
   tab_replace:
-  
+
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
-  path: ''
+  path: ""
   per_page: 10
   order_by: -date
-  
+
 # Category & Tag
 default_category: uncategorized
 category_map:
@@ -78,14 +78,14 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-- type: git
-  repo: git@git.coding.net:inonme/hexo.git
-  branch: coding-pages
-  message: '正在部署到Coding中...'
-- type: git
-  repo: git@github.com:fanite/cping.github.io.git
-  branch: gh-pages
-  message: '正在部署到Github中...'
+  - type: git
+    repo: git@git.coding.net:inonme/hexo.git
+    branch: coding-pages
+    message: "正在部署到Coding中..."
+  - type: git
+    repo: git@github.com:fanite/cping.github.io.git
+    branch: gh-pages
+    message: "正在部署到Github中..."
 
 # hexo-neat
 neat_enable: true
@@ -95,11 +95,11 @@ neat_html:
 neat_css:
   enable: true
   exclude:
-    - '*.min.css'
+    - "*.min.css"
 neat_js:
   enable: true
   mangle: true
   output:
   compress:
   exclude:
-    - '*.min.js'
+    - "*.min.js"
